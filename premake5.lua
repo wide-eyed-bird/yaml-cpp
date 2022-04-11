@@ -17,9 +17,13 @@ project "yaml-cpp"
         "include"
     }
 
+    defines {
+       " YAML_CPP_STATIC_DEFINE"
+    }
+
     filter "system:windows"
         systemversion "latest"
-        staticruntime "on"
+        staticruntime "off"
 
     filter "configurations:Debug"
         runtime "Debug"
