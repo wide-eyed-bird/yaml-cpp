@@ -23,7 +23,7 @@ project "yaml-cpp"
 
     filter "system:windows"
         systemversion "latest"
-        staticruntime "off"
+        staticruntime "on"
 
     filter "configurations:Debug"
         runtime "Debug"
@@ -32,9 +32,3 @@ project "yaml-cpp"
     filter "configurations:Release"
         runtime "Release"
         optimize "on"
-
-    filter { "system:windows", "configurations:Debug" }
-        buildoptions "/MTd"
-
-    filter { "system:windows", "configurations:Release" }
-        buildoptions "/MT"
